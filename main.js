@@ -15,7 +15,7 @@ function SelectEvent(event) {
     } 
 
     const eventData = fetch(url + "data.json")
-        .then(response => response.json)
+        .then(response => response.json())
         .then(data => console.log(data))
 
     document.querySelector("#pick-container").querySelector("h1").textContent
