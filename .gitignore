@@ -1,2 +1,4 @@
 .DS_STORE
 .vscode
+.venv
+update_data.py

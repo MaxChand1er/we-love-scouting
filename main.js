@@ -1,3 +1,5 @@
+const url = "https://maxchand1er.github.io/religious-scouting-rituals/"
+
 const eventDropdown = document.querySelector("#event-dropdown")
 const eventContainer = document.querySelector("#event-container")
 
@@ -12,6 +14,11 @@ function SelectEvent(event) {
         return
     } 
 
+    const eventData = fetch(url + "data.json")
+        .then(response => response.json)
+        .then(data => console.log(data))
+
+    document.querySelector("#pick-container").querySelector("h1").textContent
     GetJson()
     console.log(event)
 }
