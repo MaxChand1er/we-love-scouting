@@ -41,3 +41,8 @@ async function SelectEvent(event) {
     document.querySelector("main").appendChild(container)
     console.log(event)
 }
+
+function GetPredictionsFromSheet (event) {
+    data = GetJson()
+    console.log(data)
+}
