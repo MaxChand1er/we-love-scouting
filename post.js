@@ -3,10 +3,7 @@ function postToSheet (person, teams, eventCode) {
 
     fetch(formUrl, {mode: "no-cors"})
         .then(response => response.json())
-        .then(data => {
-            // Process the returned data
-            console.log(data);
-        })
+        .then(data => console.log(data))
         .catch(error => {
             // Handle errors
             console.error('Error:', error);
