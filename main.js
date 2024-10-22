@@ -49,6 +49,8 @@ async function SelectEvent(event) {
         postToSheet(name, picks, event)
     })
 
+    GetPredictionsFromSheet(event)
+
     container.classList.remove("hidden")
     document.querySelector("main").appendChild(container)
     console.log(event)
