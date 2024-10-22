@@ -31,8 +31,8 @@ async function SelectEvent(event) {
     container.querySelector(".pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
 
     container.querySelector(".pick-submit-btn").addEventListener("click", () => {
-        const name = container.querySelector(".name-input").value.strip()
-        const picks = container.querySelector(".picks-input").value.strip()
+        const name = container.querySelector(".name-input").value.trim()
+        const picks = container.querySelector(".picks-input").value.trim()
 
         postToSheet(name, picks, event)
     })
