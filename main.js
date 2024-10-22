@@ -23,7 +23,7 @@ async function SelectEvent(event) {
 
     const eventData = await fetch(url + "data.json")
         .then(response => response.json())
-        .then(data => console.log(data["events"][event]))
+        .then(data => data["events"][event])
 
     let container = eventContainerTemplate.cloneNode(true)
     container.id = "event-container-" + event
