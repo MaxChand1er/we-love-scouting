@@ -13,9 +13,6 @@ function fetchSheetCsv() {
         });
 }
 
-// Run the fetch operation
-const csv = fetchSheetCsv()
-console.log(csv)
 
 function csvToJson(csvString) {
     const rows = csvString
@@ -47,12 +44,9 @@ function csvToJson(csvString) {
     return JSON.stringify(jsonData);
 }
 
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-      if ((new Date().getTime() - start) > milliseconds){
-        break;
-      }
-    }
-  }
-  
+function GetJson () {
+    const csv = fetchSheetCsv()
+    console.log(csv)
+
+    console.log(csvToJson(csv))
+}  
