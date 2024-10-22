@@ -46,6 +46,6 @@ function csvToJson(csvString) {
 
 function GetJson () {
     const csv = fetchSheetCsv()
-    print(csv)
+    console.log(csv)
     return csvToJson(csv)
 }  
