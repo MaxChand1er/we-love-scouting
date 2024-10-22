@@ -28,7 +28,7 @@ async function SelectEvent(event) {
     let container = eventContainerTemplate.cloneNode(true)
     container.id = "event-container-" + event
     
-    container.querySelector("#pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
+    container.querySelector(".pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
 
     container.querySelector(".pick-submit-btn").addEventListener("click", () => {
         const name = container.querySelector(".name-input").value.strip()
