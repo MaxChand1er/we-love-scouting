@@ -8,15 +8,16 @@ eventDropdown.addEventListener("change", () => {
     SelectEvent(eventDropdown.value)
 })
 
-function SelectEvent(event) {
+async function SelectEvent(event) {
     if (event == "") {
         eventContainer.classList.add("hidden")
         return
     } 
 
-    const eventData = fetch(url + "data.json")
+    const eventData = await fetch(url + "data.json")
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => console.log(data))["events"][event]
+    
 
     document.querySelector("#pick-container").querySelector("h1").textContent
     GetJson()

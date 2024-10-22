@@ -1,12 +1,1 @@
-{
-    "events": {
-        "2024azva": {
-            "pastDeadline": false,
-            "teams": [
-                {
-                    
-                }
-            ]
-        }
-    }
-}
+{"events": {"2024azva": {"name": "Arizona Valley Regional", "pastDeadline": false, "teams": {"1165": {"name": "Team Paradise"}, "2403": {"name": "Plasma Robotics"}, "2478": {"name": "Westwood Robotics"}, "2659": {"name": "RoboWarriors"}, "2662": {"name": "RoboKrew"}, "2840": {"name": "PCDS Blue Tide"}, "3019": {"name": "Firebirds"}, "3128": {"name": "The Aluminum Narwhals"}, "3158": {"name": "PrepaTec - TECBOT"}, "3256": {"name": "WarriorBorgs"}, "3309": {"name": "Friarbots"}, "3648": {"name": "Sparta Robotica"}, "3853": {"name": "Pridetronics"}, "4146": {"name": "Sabercats"}, "4415": {"name": "EPIC Robotz"}, "4565": {"name": "Skyline Robotics"}, "498": {"name": "The Cobra Commanders"}, "5025": {"name": "Pacific Steel"}, "5059": {"name": "The Midnight Cicadas"}, "5430": {"name": "Pirate Robolution"}, "60": {"name": "Kingman FIRST Robotics Team 60 (The Bionic Bulldogs)"}, "6036": {"name": "Peninsula Robotics"}, "6127": {"name": "BHS Pumatrons"}, "6352": {"name": "LAUNCH TEAM"}, "6413": {"name": "Degrees of Freedom"}, "6560": {"name": "Charging Champions"}, "6833": {"name": "Phoenix Robotics"}, "6907": {"name": "The G.O.A.T"}, "696": {"name": "Circuit Breakers"}, "698": {"name": "Hamilton Microbots"}, "7214": {"name": "Tiger-OPS Robotics"}, "7645": {"name": "NK MTC"}, "7755": {"name": "Phantom Circuits"}, "8012": {"name": "APEX Robotics"}, "9059": {"name": "COLTech Robotics"}, "9091": {"name": "A.W.E."}, "9432": {"name": "Team 8-Bit"}, "9501": {"name": "Sidereal Envoy"}, "9704": {"name": "IgKnighted"}, "9777": {"name": "Knights of the Lab Table"}, "991": {"name": "BroncoBots"}}}}}
