@@ -1,8 +1,8 @@
 sheetId = "1_BlmEIzj9PHMkKceLILv7pM2YOgHLWMdL8RnDwN5o0c"
 const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tqx=out:json&tq&gid=0'
 
-function fetchSheetCsv() {
-    return fetch(sheetLink)
+async function fetchSheetCsv() {
+    return await fetch(sheetLink)
         .then(response => response.text())
         .then(data => {
             return data; // Return the data for further use
@@ -44,7 +44,7 @@ function csvToJson(csvString) {
     return JSON.stringify(jsonData);
 }
 
-async function GetJson () {
-    const csv = await fetchSheetCsv()
+function GetJson () {
+    const csv = fetchSheetCsv()
     return csvToJson(csv)
 }  
