@@ -17,7 +17,7 @@ async function SelectEvent(event) {
         });
     }
     if (event == "") {
-        eventContainer.classList.add("hidden")
+        eventContainerTemplate.classList.add("hidden")
         return
     } 
 
@@ -25,7 +25,7 @@ async function SelectEvent(event) {
         .then(response => response.json())
         .then(data => console.log(data["events"][event]))
 
-    let container = eventContainer.cloneNode(true)
+    let container = eventContainerTemplate.cloneNode(true)
     container.id = "event-container-" + event
     
     container.querySelector("#pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
