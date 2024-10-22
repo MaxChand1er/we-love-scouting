@@ -1,7 +1,7 @@
 const url = "https://maxchand1er.github.io/religious-scouting-rituals/"
 
 const eventDropdown = document.querySelector("#event-dropdown")
-const eventContainerTemplate = document.querySelector("#event-container")
+const eventContainerTemplate = document.querySelector("#event-container-template")
 
 
 eventDropdown.addEventListener("change", () => {
