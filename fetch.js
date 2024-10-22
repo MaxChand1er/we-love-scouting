@@ -3,14 +3,14 @@ const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tq
 
 async function fetchSheetCsv() {
     return await fetch(sheetLink)
-        .then(response => response.text())
+        /*.then(response => response.text())
         .then(data => {
             return data; // Return the data for further use
         })
         .catch(error => {
             console.error('Error:', error);
             throw error; // Rethrow to handle it in the calling function
-        });
+        });*/
 }
 
 
@@ -46,6 +46,5 @@ function csvToJson(csvString) {
 
 function GetJson () {
     const csv = fetchSheetCsv()
-    console.log(csv)
     return csvToJson(csv)
 }  
