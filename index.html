@@ -13,16 +13,16 @@
             <option value="">Select event...</option>
             <option value="2024azva">2024 Arizona Valley Regional</option>
         </select>
-        <div id="event-container" class="hidden">
-            <div id="pick-container">
+        <div id="event-container-template" class="event-container hidden">
+            <div class="pick-container">
                 <h1>Make your pick!</h1>
                 <p>Enter your name and the numbers for the six teams you believe will perform best at the event.</p>
                 <p>Do not impersonate others or I will be sad.</p>
                 <label for="name">Enter your name:</label>
-                <input name="name" id="name-input" placeholder="Enter name...">
+                <input name="name" class="name-input" placeholder="Enter name...">
                 <label for="picks">Enter six picks separated by a comma:</label>
-                <input name="picks" id="picks-input" placeholder="Enter picks...">
-                <button id="pick-submit-btn" type="button">Submit</button>
+                <input name="picks" class="picks-input" placeholder="Enter picks...">
+                <button class="pick-submit-btn" type="button">Submit</button>
             </div>
     
             <table>
