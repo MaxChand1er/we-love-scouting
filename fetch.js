@@ -59,7 +59,7 @@ async function GetJson () {
     data = []
     json["table"]["rows"].forEach(row => {
         data.push({
-            "date": row["c"][0]["v"],
+            "date": Date.parse(row["c"][0]["f"]),
             "name": row["c"][1]["v"],
             "picks": row["c"][2]["v"],
             "event": row["c"][3]["v"]
