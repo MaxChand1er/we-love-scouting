@@ -2,7 +2,7 @@ sheetId = "1_BlmEIzj9PHMkKceLILv7pM2YOgHLWMdL8RnDwN5o0c"
 const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tqx=out:json&tq&gid=0'
 
 async function fetchSheetCsv() {
-    let response = await fetch(sheetLink)
+    let response = await fetch(sheetLink, {headers: {"content-type": "text/csv;charset=UTF-8"}})
     let data = await response.text()
         /*.then(response => response.text())
         .then(data => {

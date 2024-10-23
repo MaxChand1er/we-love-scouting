@@ -1,5 +1,4 @@
 const url = "https://maxchand1er.github.io/religious-scouting-rituals/"
-
 const eventDropdown = document.querySelector("#event-dropdown")
 const eventContainerTemplate = document.querySelector("#event-container-template")
 
@@ -56,7 +55,9 @@ async function SelectEvent(event) {
     console.log(event)
 }
 
-function GetPredictionsFromSheet (event) {
-    data = GetJson()
+async function GetPredictionsFromSheet (event) {
+    data = await GetJson()
     console.log(data)
+
+
 }
