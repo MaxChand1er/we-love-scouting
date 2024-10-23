@@ -3,7 +3,7 @@ const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tq
 
 async function fetchSheetCsv() {
     let response = await fetch(sheetLink)
-    let data = await response.json()
+    let data = await response.body
         /*.then(response => response.text())
         .then(data => {
             return data; // Return the data for further use
