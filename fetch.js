@@ -16,6 +16,7 @@ async function fetchSheetCsv() {
             console.error('Error:', error);
             throw error; // Rethrow to handle it in the calling function
         });*/
+    console.log(data)
     return data
 }
 
