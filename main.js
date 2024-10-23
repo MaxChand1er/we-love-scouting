@@ -31,7 +31,7 @@ async function SelectEvent(event) {
 
     container.querySelector(".pick-submit-btn").addEventListener("click", () => {
         const name = container.querySelector(".name-input").value.trim()
-        const picks = container.querySelector(".picks-input").value.trim().split(/,|(, )/gm)
+        let picks = container.querySelector(".picks-input").value.trim().split(/,|(, )/gm)
         
         picks = picks.map((pick) => {
             return (pick in eventData["teams"] ? 
