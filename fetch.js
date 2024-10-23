@@ -3,7 +3,7 @@ const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tq
 
 async function fetchSheetCsv() {
     let response = await fetch(sheetLink)
-    let data = await response.body
+    let data = await response.text()
         /*.then(response => response.text())
         .then(data => {
             return data; // Return the data for further use
@@ -12,7 +12,6 @@ async function fetchSheetCsv() {
             console.error('Error:', error);
             throw error; // Rethrow to handle it in the calling function
         });*/
-    print(data)
     return data
 }
 
