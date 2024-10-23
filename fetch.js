@@ -53,7 +53,18 @@ function csvToJson(csvString) {
 }
 
 async function GetJson () {
-    const csv = await fetchSheetCsv()
-    console.log(csv)
-    return csvToJson(csv)
+    const json = await fetchSheetCsv()
+    console.log(json)
+
+    data = []
+    json["table"]["rows"].forEach(row => {
+        data.append({
+            "date": row["c"][0],
+            "name": row["c"][1],
+            "picks": row["c"][2],
+            "event": row["c"][3]
+        })
+    });
+
+    return data
 }  
