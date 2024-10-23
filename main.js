@@ -48,7 +48,7 @@ async function SelectEvent(event) {
         postToSheet(name, picks, event)
     })
 
-    GetPredictionsFromSheet(event)
+    createPredictionTable(event, container)
 
     container.classList.remove("hidden")
     document.querySelector("main").appendChild(container)
@@ -65,5 +65,22 @@ async function GetPredictionsFromSheet (event) {
         lastPredictions[el["name"]] = el
     })
 
-    console.log(lastPredictions)
+    return lastPredictions
+}
+
+function createPredictionTable(event, container) {
+    const predictions = GetPredictionsFromSheet(event)
+
+    for (key in predictions) {
+        let row = document.createElement("tr")
+        let nameEl = document.createElement("td")
+        let picksEl = document.createElement("td")
+
+        nameEl.textContent = key
+        picksEl.textContent = predictions[key]["picks"]
+
+        row.append(nameEl, picksEl)
+
+        container.querySelector("table").append(row)
+    }
 }
