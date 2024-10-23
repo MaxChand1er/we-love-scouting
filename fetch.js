@@ -4,6 +4,7 @@ const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tq
 async function fetchSheetCsv() {
     let response = await fetch(sheetLink, {headers: {"content-type": "text/csv;charset=UTF-8"}})
     let data = await response.text()
+    console.log(data)
     data = JSON.parse(
         data.replace(/(^google\.visualization\.Query\.setResponse\(|\);$)/g,'')
     );
