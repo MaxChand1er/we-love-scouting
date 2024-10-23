@@ -6,7 +6,7 @@ async function fetchSheetCsv() {
     let data = await response.text()
     console.log(data)
     data = JSON.parse(
-        data.replace(/(^google\.visualization\.Query\.setResponse\(|\);$)/g,'')
+        data.match(/(?<=Query\.setResponse\().+(?=\);)/gm)
     );
         
         /*.then(response => response.text())
