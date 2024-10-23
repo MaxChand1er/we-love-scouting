@@ -68,9 +68,9 @@ async function GetPredictionsFromSheet (event) {
     return lastPredictions
 }
 
-function createPredictionTable(event, container) {
-    const predictions = GetPredictionsFromSheet(event)
-
+async function createPredictionTable(event, container) {
+    const predictions = await GetPredictionsFromSheet(event)
+    console.log(predictions)
     for (key in predictions) {
         let row = document.createElement("tr")
         let nameEl = document.createElement("td")
