@@ -63,4 +63,6 @@ async function GetPredictionsFromSheet (event) {
     data.filter((el) => {el["event"] == event}).forEach((el) => {
         lastPredictions[el["name"]] = el
     })
+
+    console.log(lastPredictions)
 }

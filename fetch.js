@@ -58,7 +58,7 @@ async function GetJson () {
 
     data = []
     json["table"]["rows"].forEach(row => {
-        data.append({
+        data.push({
             "date": row["c"][0],
             "name": row["c"][1],
             "picks": row["c"][2],
