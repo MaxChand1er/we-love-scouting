@@ -3,10 +3,12 @@ async function setupTable () {
     console.log(data)
 
     let players = data["players"]
-    players.sort((a,b) => a["overall"] - b["overall"])
+
+    let ordered_player_list = players.keys
+    ordered_player_list.sort((a,b) => {players[a]["overall"]["overallScore"] - players[b]["overall"]["overallScore"]})
 
     let rows = []
-    for (key in players) {
+    for (key in ordered_player_list) {
         player = players[key]
         let row = document.createElement("tr")
 
@@ -16,7 +18,7 @@ async function setupTable () {
         let oprEl = document.createElement("td")
         let recordEl = document.createElement("td")
 
-        rankEl.textContent = players.keys.indexOf(key)
+        rankEl.textContent = ordered_player_list.indexOf(key)
         nameEl.textContent = key
         overallEl.textContent = player["overall"]["overallScore"]
         oprEl.textContent = player["overall"]["oprPercentile"]
