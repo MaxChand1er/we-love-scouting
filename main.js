@@ -4,7 +4,7 @@ async function setupTable () {
 
     let players = data["players"]
 
-    let ordered_player_list = players.keys
+    let ordered_player_list = Object.keys(players)
     ordered_player_list.sort((a,b) => {players[a]["overall"]["overallScore"] - players[b]["overall"]["overallScore"]})
 
     let rows = []
