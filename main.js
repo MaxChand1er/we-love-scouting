@@ -7,7 +7,7 @@ async function setupTable () {
 
     let ordered_player_list = Object.keys(players)
     console.log(ordered_player_list)
-    ordered_player_list.sort((a,b) => {players[a]["overall"]["overallScore"] - players[b]["overall"]["overallScore"]})
+    ordered_player_list.sort((a,b) => {players[b]["overall"]["overallScore"] - players[a]["overall"]["overallScore"]})
 
     let rows = []
     ordered_player_list.forEach(key => {
@@ -22,14 +22,14 @@ async function setupTable () {
         let oprEl = document.createElement("td")
         let recordEl = document.createElement("td")
 
-        rankEl.textContent = ordered_player_list.indexOf(key)
+        rankEl.textContent = ordered_player_list.indexOf(key) + 1
         nameEl.textContent = key
         overallEl.textContent = player["overall"]["overallScore"]
         oprEl.textContent = player["overall"]["oprPercentile"]
         recordEl.textContent = player["overall"]["recordPercentile"]
 
         row.append(rankEl,nameEl,overallEl,oprEl,recordEl)
-        rows.push(row)
+        rows.push(row.outerHTML)
     })
 
     document.querySelector("#leaderboard").querySelector("table").append(rows)
