@@ -7,7 +7,9 @@ async function setupTable () {
     console.log(players)
 
     let ordered_player_list = Object.keys(players)
-    ordered_player_list.sort((a,b) => {players[b]["overall"]["overallScore"] - players[a]["overall"]["overallScore"]})
+    ordered_player_list.sort((a,b) => {
+        console.log(b, players[b]["overall"]["overallScore"], a, players[a]["overall"]["overallScore"], players[b]["overall"]["overallScore"] - players[a]["overall"]["overallScore"])
+        players[b]["overall"]["overallScore"] - players[a]["overall"]["overallScore"]})
     console.log(ordered_player_list)
 
     let rows = []
