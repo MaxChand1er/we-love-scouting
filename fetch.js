@@ -1,9 +1,14 @@
 sheetId = "13ZDiciDlCF4xaWq0_5Db-mA5CY3SUucBOXhcPiYBG4I"
-const sheetLink = 'https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tqx=out:json&tq&gid=0'
+const sheetLink = 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/'+sheetId+'/gviz/tq?tqx=out:json&tq&gid=0'
+
+const data_url = "https://maxchand1er.github.io/religious-scouting-rituals/data.json"
+
 
 async function fetchSheetCsv() {
-    let response = await fetch(sheetLink, {headers: {"content-type": "text/csv;charset=UTF-8"}})
+    console.log(sheetLink)
+    let response = await fetch(sheetLink, {origin: "hi", headers: {"content-type": "text/csv;charset=UTF-8"} })
     let data = await response.text()
+    console.log("sent reques tto" + sheetLink)
     console.log(data)
     data = JSON.parse(
         data.match(/(?<=Query\.setResponse\().+(?=\);)/gm)
@@ -67,4 +72,11 @@ async function GetJson () {
     });
 
     return data
-}  
+}
+
+async function getData() {
+    const data = await fetch(data_url)
+        .then(response => response.json())
+
+    return data
+}

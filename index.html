@@ -7,34 +7,23 @@
   </head>
   <body>
     <main>
-        <h1>Hi</h1>  
-        <label for="events">Choose an event:</label>
-        <select name="events" id="event-dropdown">
-            <option value="">Select event...</option>
-            <option value="2024azva">2024 Arizona Valley Regional</option>
-        </select>
-        <div id="event-container-template" class="event-container hidden">
-            <div class="pick-container">
-                <h1>Make your pick!</h1>
-                <p>Enter your name and the numbers for the six teams you believe will perform best at the event.</p>
-                <p>Do not impersonate others or I will be sad.</p>
-                <label for="name">Enter your name:</label>
-                <input name="name" class="name-input" placeholder="Enter name...">
-                <label for="picks">Enter six picks separated by a comma:</label>
-                <input name="picks" class="picks-input" placeholder="Enter picks...">
-                <button class="pick-submit-btn" type="button">Submit</button>
-            </div>
-    
-            <table>
-                <tr>
-                    <th>Person</th>
-                    <th>Picks</th>
-                </tr>
-            </table>
+        <h1>Fantasy FRC</h1>  
+        <a id="picking-director-btn" class="button" href="./picking.html">Submit picks</a>
+        <div id="leaderboard">
+          <h2>Leaderboard</h2>
+          <table>
+            <tr>
+                <th>Rank</th>
+                <th>Person</th>
+                <th>Overall rating</th>
+                <th>OPR rating</th>
+                <th>Record rating</th>
+            </tr>
+          </table>
         </div>
     </main>
-    <script src="post.js"></script>
-    <script src="fetch.js"></script>
-    <script src="main.js"></script>
   </body>
+  <script src="post.js"></script>
+  <script src="fetch.js"></script>
+  <script src="main.js"></script>
 </html>
