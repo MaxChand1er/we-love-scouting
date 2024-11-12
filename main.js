@@ -11,7 +11,9 @@ async function setupTable () {
 
     let rows = []
     for (key in ordered_player_list) {
+        console.log(key)
         player = players[key]
+        console.log(player)
         let row = document.createElement("tr")
 
         let rankEl = document.createElement("td")
