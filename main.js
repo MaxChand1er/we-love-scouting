@@ -1,6 +1,7 @@
 async function setupTable () {
     data = await getData()
-    console.log(data)
+
+    let table = document.querySelector("#leaderboard").querySelector("table")
 
     let players = data["players"]
     console.log(players)
@@ -14,24 +15,19 @@ async function setupTable () {
         console.log(key)
         player = players[key]
         console.log(player)
-        let row = document.createElement("tr")
+        let row = table.insertRow()
 
-        let rankEl = document.createElement("td")
-        let nameEl = document.createElement("td")
-        let overallEl = document.createElement("td")
-        let oprEl = document.createElement("td")
-        let recordEl = document.createElement("td")
+        let rankEl = row.insertCell()
+        let nameEl = row.insertCell()
+        let overallEl = row.insertCell()
+        let oprEl = row.insertCell()
+        let recordEl = row.insertCell()
 
         rankEl.textContent = ordered_player_list.indexOf(key) + 1
         nameEl.textContent = key
         overallEl.textContent = player["overall"]["overallScore"]
         oprEl.textContent = player["overall"]["oprPercentile"]
         recordEl.textContent = player["overall"]["recordPercentile"]
-
-        row.append(rankEl,nameEl,overallEl,oprEl,recordEl)
-        rows.push(row.outerHTML)
     })
-
-    document.querySelector("#leaderboard").querySelector("table").append(rows)
 }
 setupTable()
