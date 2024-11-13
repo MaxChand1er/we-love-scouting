@@ -31,9 +31,9 @@ async function SelectEvent(event) {
 
 
     if (eventData["pastDeadline"]) {
-        container.querySelector(".event-container").querySelector("h2").textContent = `Picking for ${eventData["name"]} has been closed`
+        container.querySelector("h2").textContent = `Picking for ${eventData["name"]} has been closed`
     } else {
-        container.querySelector(".event-container").querySelector("h2").textContent = `Make your pick for ${eventData["name"]}!`
+        container.querySelector("h2").textContent = `Make your pick for ${eventData["name"]}!`
         container.querySelector(".pick-submit-btn").addEventListener("click", () => {
             const name = container.querySelector(".name-input").value.trim()
             let picks = container.querySelector(".picks-input").value.split(/,|, |\//gm)
