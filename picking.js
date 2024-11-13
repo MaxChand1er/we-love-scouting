@@ -30,7 +30,7 @@ async function SelectEvent(event) {
     predictionsTable = container.querySelector("table")
 
 
-    if (eventData[pastDeadline]) {
+    if (eventData["pastDeadline"]) {
         container.querySelector(".pick-container").querySelector("h1").textContent = `Picking for ${eventData["name"]} has been closed`
     } else {
         container.querySelector(".pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
@@ -64,7 +64,7 @@ async function SelectEvent(event) {
             postToSheet(name, picks, event)
         })
     }
-    
+
     createPredictionTable(event, container)
 
     container.classList.remove("hidden")
