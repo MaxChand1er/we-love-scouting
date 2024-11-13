@@ -17,6 +17,8 @@ body {
     height: 100%;
     width: 100%;
 
+    color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +61,7 @@ main {
     align-items: center;
     justify-content: center;
 
-    width: 90%;
+    min-width: 90%;
     min-height: 25%;
 
     border-top-left-radius: 100px;
@@ -74,6 +76,29 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+a.button {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100%;
+
+    outline: rgba(255, 255, 255, 0.5) solid 2px;
+    outline-offset: 2px;
+    border: none;
+    border-radius: 100px;
+
+    width:25%;
+    height:40px;
+
+    text-decoration: none;
+    color: white;
+    background-color: rgb(55, 55, 55);
+}
+
+a.button:hover {
+    background-color: rgb(50, 50, 50);
 }
 
 table {
@@ -94,30 +119,13 @@ tr {
 tr:nth-child(even) {
     background-color: rgb(25, 25, 25);
 }
-
-
-a.button {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 100%;
-
-    outline: none;
-    border: none;
-    border-radius: 100px;
-
-    width:25%;
-    height:40px;
-
-    text-decoration: none;
-    color: white;
-    background-color: rgb(55, 55, 55);
-}
-
-a.button:hover {
-    background-color: rgb(50, 50, 50);
-}
-
 p, label, table, button, a {
     font-size: 18px;
+}
+
+.back-button {
+    min-width: 45px;
+    min-height: 45px;
+
+    line-height: 45px;
 }

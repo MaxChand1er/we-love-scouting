@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Fantasy FRC Pick</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main>
-        <a style="font-size: 25px; display:block;" href="./index.html">Home</a>  
-        <label for="events">Choose an event:</label>
-        <select name="events" id="event-dropdown">
-            <option value="">Select event...</option>
-            <option value="2024azva">2024 Arizona Valley Regional</option>
-        </select>
-        <div id="event-container-template" class="event-container hidden">
-          <h2>Make your pick!</h2>
-            <div class="pick-container">
-                <p>Enter your name and the numbers for the six teams you believe will perform best at the event.</p>
-                <label for="name">Enter your name:</label>
-                <input name="name" class="name-input" placeholder="Enter name..."><br>
-                <label for="picks">Enter six picks separated by a comma:</label>
-                <input name="picks" class="picks-input" placeholder="Enter picks..."><br>
-                <button class="pick-submit-btn" type="button">Submit</button>
-            </div>
-    
-            <table>
-                <tr>
-                    <th>Person</th>
-                    <th>Picks</th>
-                </tr>
-            </table>
-        </div>
-    </main>
-    <script src="post.js"></script>
-    <script src="fetch.js"></script>
-    <script src="picking.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fantasy FRC Pick</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <div class="box" style="height: 10%;">
+      <a class="button back-button" style="font-size: 25px; display:block;" href="./index.html"><</a>
+    </div>
+    <label for="events">Choose an event:</label>
+    <select name="events" id="event-dropdown">
+      <option value="">Select event...</option>
+      <option value="2024azva">2024 Arizona Valley Regional</option>
+    </select>
+    <div id="event-container-template" class="event-container hidden">
+      <h2>Make your pick!</h2>
+      <div class="pick-container">
+        <p>Enter your name and the numbers for the six teams you believe will perform best at the event.</p>
+        <label for="name">Enter your name:</label>
+        <input name="name" class="name-input" placeholder="Enter name..."><br>
+        <label for="picks">Enter six picks separated by a comma:</label>
+        <input name="picks" class="picks-input" placeholder="Enter picks..."><br>
+        <button class="pick-submit-btn" type="button">Submit</button>
+      </div>
+
+      <table>
+        <tr>
+          <th>Person</th>
+          <th>Picks</th>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <script src="post.js"></script>
+  <script src="fetch.js"></script>
+  <script src="picking.js"></script>
+</body>
+
 </html>
