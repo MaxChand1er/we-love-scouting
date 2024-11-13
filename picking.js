@@ -30,7 +30,7 @@ async function SelectEvent(event) {
     predictionsTable = container.querySelector("table")
 
 
-    if (eventData["pastDeadline"]) {
+    if (eventData["pastDeadline"] == true) {
         container.querySelector("h2").textContent = `Picking for ${eventData["name"]} has closed`
         container.querySelector(".pick-container").classList.add("hidden")
     } else {
