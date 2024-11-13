@@ -32,6 +32,7 @@ async function SelectEvent(event) {
 
     if (eventData["pastDeadline"]) {
         container.querySelector("h2").textContent = `Picking for ${eventData["name"]} has been closed`
+        container.querySelector(".pick-container").classList.add("hidden")
     } else {
         container.querySelector("h2").textContent = `Make your pick for ${eventData["name"]}!`
         container.querySelector(".pick-submit-btn").addEventListener("click", () => {
@@ -61,6 +62,7 @@ async function SelectEvent(event) {
                 return
             }
 
+            alert("Your picks have been submit")
             postToSheet(name, picks, event)
         })
     }
