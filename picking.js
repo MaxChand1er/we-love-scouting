@@ -31,7 +31,7 @@ async function SelectEvent(event) {
 
 
     if (eventData["pastDeadline"]) {
-        container.querySelector("h2").textContent = `Picking for ${eventData["name"]} has been closed`
+        container.querySelector("h2").textContent = `Picking for ${eventData["name"]} has closed`
         container.querySelector(".pick-container").classList.add("hidden")
     } else {
         container.querySelector("h2").textContent = `Make your pick for ${eventData["name"]}!`
