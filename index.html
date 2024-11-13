@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Fantasy FRC</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main>
-        <h1>Fantasy FRC</h1>  
-        <a id="picking-director-btn" class="button" href="./picking.html">Submit picks</a>
-        <div id="leaderboard">
-          <h2>Leaderboard</h2>
-          <table>
-            <tr>
-                <th>Rank</th>
-                <th>Person</th>
-                <th>Overall rating</th>
-                <th>OPR rating</th>
-                <th>Record rating</th>
-            </tr>
-          </table>
-        </div>
-    </main>
-  </body>
-  <script src="post.js"></script>
-  <script src="fetch.js"></script>
-  <script src="main.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fantasy FRC</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="page-title">Fantasy FRC</h1>
+    <div class="box" style="height: 15%; width: 100%;">
+      <a id="picking-director-btn" class="button" href="./picking.html">Submit picks</a>
+    </div>
+    <div class="box" id="leaderboard" style="width:100%; flex-direction: column;">
+      <h2 class="table-label">Leaderboard</h2>
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Person</th>
+          <th>Overall rating</th>
+          <th>OPR rating</th>
+          <th>Record rating</th>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+<script src="post.js"></script>
+<script src="fetch.js"></script>
+<script src="main.js"></script>
+
 </html>
