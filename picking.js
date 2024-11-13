@@ -30,37 +30,41 @@ async function SelectEvent(event) {
     predictionsTable = container.querySelector("table")
 
 
-    container.querySelector(".pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
-    container.querySelector(".pick-submit-btn").addEventListener("click", () => {
-        const name = container.querySelector(".name-input").value.trim()
-        let picks = container.querySelector(".picks-input").value.split(/,|, |\//gm)
-        console.log(picks)
-        let invalidPicks = []
-        picks = picks.map((pick) => {   
-            pick  = pick.trim()
-            valid = (pick in eventData["teams"])
-            if (!valid) {invalidPicks.push(pick)}
-            return (valid ? 
-                pick :
-                "invalid"
-            
-        )})
-        console.log(invalidPicks)
-        if (!name) {
-            alert("Enter a valid name")
-            return
-        } if (!picks || picks.length < 6 || picks.includes("invalid")) {
-            let alertMsg = "Enter valid picks. Must be six teams numbers separated by commas attending the event."
-            if (invalidPicks.length) {
-                alertMsg += " Invalid teams: " + invalidPicks.join(", ")
+    if (eventData[pastDeadline]) {
+        container.querySelector(".pick-container").querySelector("h1").textContent = `Picking for ${eventData["name"]} has been closed`
+    } else {
+        container.querySelector(".pick-container").querySelector("h1").textContent = `Make your pick for ${eventData["name"]}!`
+        container.querySelector(".pick-submit-btn").addEventListener("click", () => {
+            const name = container.querySelector(".name-input").value.trim()
+            let picks = container.querySelector(".picks-input").value.split(/,|, |\//gm)
+            console.log(picks)
+            let invalidPicks = []
+            picks = picks.map((pick) => {   
+                pick  = pick.trim()
+                valid = (pick in eventData["teams"])
+                if (!valid) {invalidPicks.push(pick)}
+                return (valid ? 
+                    pick :
+                    "invalid"
+                
+            )})
+            console.log(invalidPicks)
+            if (!name) {
+                alert("Enter a valid name")
+                return
+            } if (!picks || picks.length < 6 || picks.includes("invalid")) {
+                let alertMsg = "Enter valid picks. Must be six teams numbers separated by commas attending the event."
+                if (invalidPicks.length) {
+                    alertMsg += " Invalid teams: " + invalidPicks.join(", ")
+                }
+                alert(alertMsg)
+                return
             }
-            alert(alertMsg)
-            return
-        }
 
-        postToSheet(name, picks, event)
-    })
-
+            postToSheet(name, picks, event)
+        })
+    }
+    
     createPredictionTable(event, container)
 
     container.classList.remove("hidden")
