@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Fantasy FRC Pick</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main>
-        <a style="font-size: 25px; display:block;" href="./index.html">Home</a>  
-        <label for="events">Choose an event:</label>
-        <select name="events" id="event-dropdown">
-            <option value="">Select event...</option>
-            <option value="2024azva">2024 Arizona Valley Regional</option>
-        </select>
-        <div id="event-container-template" class="event-container hidden">
-          <h2>Make your pick!</h2>
-            <div class="pick-container">
-                <p>Enter your name and the numbers for the six teams you believe will perform best at the event.</p>
-                <label for="name">Enter your name:</label>
-                <input name="name" class="name-input" placeholder="Enter name..."><br>
-                <label for="picks">Enter six picks separated by a comma:</label>
-                <input name="picks" class="picks-input" placeholder="Enter picks..."><br>
-                <button class="pick-submit-btn" type="button">Submit</button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy FRC - Submit Page</title>
+    <link rel="stylesheet" href="picking.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <a href="index.html" class="back-button" aria-label="Go back">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </a>
+
+        <h1>Fantasy FRC</h1>
+        <form class="input-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <p class="form-label">Pick your teams:</p>
+            <div class="dropdown-section">
+                <select id="team1" name="team1" required>
+                    <option value="" disabled selected>Select Team 1</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
+
+                <select id="team2" name="team2" required>
+                    <option value="" disabled selected>Select Team 2</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
+
+                <select id="team3" name="team3" required>
+                    <option value="" disabled selected>Select Team 3</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
+
+                <select id="team4" name="team4" required>
+                    <option value="" disabled selected>Select Team 4</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
+
+                <select id="team5" name="team5" required>
+                    <option value="" disabled selected>Select Team 5</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
+
+                <select id="team6" name="team6" required>
+                    <option value="" disabled selected>Select Team 6</option>
+                    <option value="teamA">Team A</option>
+                    <option value="teamB">Team B</option>
+                    <option value="teamC">Team C</option>
+                </select>
             </div>
-    
-            <table>
-                <tr>
-                    <th>Person</th>
-                    <th>Picks</th>
-                </tr>
-            </table>
-        </div>
-    </main>
-    <script src="post.js"></script>
-    <script src="fetch.js"></script>
-    <script src="picking.js"></script>
-  </body>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
 </html>

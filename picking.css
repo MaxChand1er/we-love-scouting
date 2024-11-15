@@ -1,0 +1,124 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: #e63946; /* Updated to red */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Removes underline */
+}
+
+.back-button:hover {
+    background-color: #c1273a; /* Darker red on hover */
+    transform: scale(1.1);
+}
+
+.back-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #121212; /* Icon color matches the background for contrast */
+}
+
+/* Container styling */
+.container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #e63946; /* Updated to red */
+}
+
+/* Form styling */
+.input-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.input-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.input-form input::placeholder {
+    color: #b3b3b3;
+}
+
+.form-label {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e63946; /* Updated to red */
+}
+
+.input-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Submit button with spacing */
+.submit-btn {
+    margin-top: 2rem; /* Adds more space between dropdowns and submit button */
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    background-color: #e63946; /* Updated to red */
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c1273a; /* Darker red on hover */
+}
